@@ -1,0 +1,175 @@
+/* ======= layout CSS ======= */
+html, body{
+    font-family: $font-style;
+}
+/* header */
+header{
+    background-color: $bg-white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 3px #EAF0ED;
+    .topMenu{
+        @include wrapper;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 42px;
+        @include iphone5Plus(){
+            @include mb-wrapper;
+            padding: 0 30px;
+            height: 84px;
+            align-items: center;
+        }
+        nav{
+            a{
+                font-size: $font-s;
+                color: $textColor-darkgreen;
+                font-weight: $font-med;
+                display: inline-block;
+                padding: 13.5px 30px;
+                @include iphone5Plus(){
+                    display: none;
+                }
+            }
+            a#cart{
+                padding: 13.5px 0 13.5px 40px;
+                @include iphone5Plus(){
+                    display: block;
+                    padding: 0;
+                    font-size: $font-m;
+                }
+            }
+        }
+        .mb_topMenu{
+            display: none;
+            @include iphone5Plus(){
+                display: block;
+                i{
+                    color: $textColor-darkgreen;
+                    font-size: $font-m;
+                }
+            }
+        }
+        .pc_logo{
+            display: block;
+            @include iphone5Plus(){
+                display: none;
+            }
+        }
+        .mb_logo{
+            display: none;
+            @include iphone5Plus(){
+                display: block;
+            }
+        }
+    }
+}
+
+/* main */
+main{
+    padding-top: 105px;
+    @include iphone5Plus(){
+        padding-top: 84px;
+    }
+}
+
+/* footer */
+footer{
+    width: 100%;
+    margin-top: 40px;
+    .EDM-wrap{
+        background-color: $bg-darkgreen;
+        padding: 30px 0;
+        .EDM{
+            @include wrapper;
+            display: flex;
+            justify-content: space-between;
+            @include iphone5Plus(){
+                @include mb-wrapper;
+                display: block;
+                padding: 0 30px;
+            }
+            p{
+                color: $textColor-lightgreen;
+                font-size: $font-l;
+                font-weight: $font-light;
+                display: flex;
+                justify-content: center;
+                @include iphone5Plus(){
+                    margin-bottom: 30px;
+                }
+                img{
+                    align-self: center;
+                }
+                span{
+                    align-self: center;
+                    margin-left: 20px;
+                }
+            }
+            .myEmail{
+                background-color: $bg-lightgreen;
+                font-size: $font-s;
+                padding-left: 20px;
+                display: flex;
+                justify-content: space-between;
+                i{
+                    color: $textColor-darkgreen;
+                    line-height: 56px;
+                }
+                input{                   
+                    @include input($bg-lightgreen);
+                }
+                button{
+                    @include button(64px, 56px, $textColor-darkgreen, $bg-yellow);
+                }
+        }
+        
+        }
+    }
+    .contact-wrap{
+        background-color: $bg-lightgreen;
+        padding: 30px 0;
+        .contact{
+            @include wrapper;
+            display: flex;
+            justify-content: space-between;
+            @include iphone5Plus(){
+                @include mb-wrapper;
+                display: block;
+                padding: 0 30px;
+            }
+            aside{
+                flex:1;
+                p{
+                    color: $textColor-darkgreen;
+                }
+            }
+            aside:nth-of-type(1){
+                p{
+                    margin: 115px 0 30px;
+                    line-height: 2;
+                    @include iphone5Plus(){
+                        margin: 40px 0 35px;
+                    }
+                }
+            }
+            aside:nth-of-type(2){
+                text-align: right;
+                @include iphone5Plus(){
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                p{
+                    margin-top: 16px;
+                    font-family: $font-style-EN;
+                }
+                img{
+                    margin-bottom: 46px;
+                    @include iphone5Plus(){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,63 @@
+/* ======= Variables ======= */
+// background-color
+$bg-white: #ffffff;
+$bg-yellow: #FFE180;
+$bg-darkgreen: #3F5D45;
+$bg-green: #8DA291;
+$bg-lightgreen :#EAF0ED;
+
+// text color
+$textColor-darkgreen: #3F5D45;
+$textColor-green: #8DA291;
+$textColor-lightgreen: #EAF0ED;
+$textColor-white: #ffffff;
+
+// font-size
+$font-s: 16px;
+$font-m: $font-s*1.25;
+$font-l: $font-s*1.5;
+
+// text style
+$font-style: 'Noto Sans TC', sans-serif;
+$font-style-EN: 'Noto Serif', serif;
+$font-light: 300;
+$font-reg: normal;
+$font-med: 500;
+$font-bold: 700;
+
+
+/* ======= Mixin ======= */
+@mixin wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 42px;
+}
+
+@mixin mb-wrapper{
+    width: 100%;
+    padding: 0;
+}
+
+@mixin fit-image($sizeW, $sizeH){
+    object-fit: cover;
+    width: $sizeW;
+    height: $sizeH;
+}
+
+@mixin fit-bgImage {
+    object-fit: cover;
+    background-position: center;
+    background-size: 100%;
+}
+
+/* ======= RWD Mixin ======= */
+@mixin pad {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin iphone5Plus {
+    @media (max-width: 414px) {
+        @content;
+    }
+}

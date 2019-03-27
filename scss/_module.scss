@@ -1,0 +1,20 @@
+@mixin button ($sizeW, $sizeH, $extColor, $bgColor) {
+    width: $sizeW;
+    height: $sizeH;
+    color: $extColor;
+    background-color: $bgColor;
+    font-family: $font-style;
+    font-size: $font-s;
+    font-weight: bold;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    
+}
+
+@mixin input ($bgColor) {
+    border: none;
+    outline: none;
+    background-color: $bgColor;
+    padding-left: 10px;
+}

@@ -1,0 +1,97 @@
+/* ======= main - product ======= */
+.productPage{
+    .BannerBlock{
+        margin-bottom: 60px;
+        @include iphone5Plus(){
+            margin-bottom: 0;
+        }
+    }
+    .ProductBlock{
+        @include iphone5Plus(){
+            @include mb-wrapper;
+            padding: 0;
+            display: block;
+        }
+        .proList{
+            flex: 1;
+            margin-right: 12px;
+            @include iphone5Plus(){
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            li{
+                max-width: 300px;
+                text-align: center;
+                font-size: $font-l;
+                color: $textColor-darkgreen;
+                border: 1px solid #EAF0ED;
+                padding: 16px 0;
+                box-sizing: border-box;
+                cursor: pointer;
+                letter-spacing: 1px;
+                @include iphone5Plus(){
+                    max-width: 100%;
+                }
+            }
+            li:hover{
+                background-color: $bg-lightgreen;
+            }
+            li:nth-of-type(1){
+                border: 1px solid #3F5D45;
+                box-sizing: border-box;
+                background-color: $bg-darkgreen;
+                color: $textColor-white;
+                font-weight: $font-med;
+            }
+        }
+        .proShow{
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            @include iphone5Plus(){
+                padding: 0 30px;
+            }
+            .page-wrap{
+                width: 100%;
+                text-align: right;
+                margin-bottom: 20px;
+                @include iphone5Plus{
+                    text-align: center;
+                    margin: 10px 0 0;
+                }
+                .pageNum{
+                    display: inline-flex;
+                    li{
+                        text-align: center;
+                        display: inline-block;
+                        width: 60px;
+                        line-height: 60px;
+                        font-size: $font-m;
+                        color: $textColor-darkgreen;
+                        border: 1px solid #EAF0ED;
+                        cursor: pointer;
+                    }
+                    li:hover{
+                        background-color: $bg-darkgreen;
+                        color: $textColor-lightgreen;
+                    }
+                }
+            }
+            .product{
+                margin-bottom: 30px;
+            }
+            .product:nth-child(n+2){
+                @include iphone5Plus(){
+                    display: block;
+                }
+            }
+            .product:nth-child(n+4){
+                display: block;
+                @include iphone5Plus(){
+                    display: none;
+                }
+            }
+        }
+    }
+}
