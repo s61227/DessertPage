@@ -1,0 +1,108 @@
+/* ======= main - cart ======= */
+.cartPage{
+    .cart-wrap{
+        @include wrapper;
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        .yourCart{
+            flex: 2;
+            margin-right: 20px;
+            h2{
+                font-size: $font-l;
+                color: $textColor-darkgreen;
+                line-height: 65px;
+                font-weight: $font-med;
+                text-align: center;
+                background-color: $bg-lightgreen;
+                margin-bottom: 13px;
+            }
+            .cartOrderList{
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #EAF0ED;
+                    padding: 20px 0;
+                    color: $textColor-darkgreen;
+                    .cartImg{
+                        img{
+                            width: 110px;
+                            height: 110px;
+                        }
+                    }
+                    .proText{
+                        line-height: 1.8;
+                        P:nth-of-type(1){
+                            font-size: $font-m;
+                        }
+                        P:nth-of-type(2){
+                            font-size: $font-s;
+                        }
+                    }
+                    .count{
+                        border: 1px solid #EAF0ED;
+                        text-align: center;
+                        span{
+                            display: inline-block;
+                            width: 48px;
+                            line-height: 48px;
+                        }
+                        span:nth-of-type(2){
+                            border-left: 1px solid #EAF0ED;
+                            border-right: 1px solid #EAF0ED;
+                        }
+                    }
+                    .total{
+                        font-weight: $font-med;
+                        font-size: $font-m;
+                    }
+                    .fa-trash-o{
+                        color: $textColor-green;
+                        font-size: $font-l;
+                    }
+                }
+            }
+        }
+
+        .orderSummary{
+            flex: 1;
+            div{
+                background-color: $bg-darkgreen;
+                h2{
+                    color: $textColor-lightgreen;
+                    font-weight: $font-med;
+                    font-size: $font-l;
+                    text-align: center;
+                    padding: 16px 0;
+                }
+                hr{
+                    margin: 0 20px 10px;
+                    color: $textColor-lightgreen;
+                }
+                p{
+                    color: $textColor-lightgreen; 
+                    margin: 8px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    span{
+                        font-weight: $font-light;
+                        font-size: $font-s;
+                    }
+                }
+                p:nth-of-type(3){
+                    margin: 16px 20px;
+                    span{  
+                        font-weight: $font-med;
+                        font-size: $font-m;
+                    }
+                }
+                button{
+                    @include button(100%, 65px, $textColor-darkgreen, $bg-yellow);
+                    font-size: $font-l;
+                }
+            }
+        }
+    }
+    
+}

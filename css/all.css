@@ -619,3 +619,111 @@ main .ProductBlock {
     @media (max-width: 414px) {
       .productPage .ProductBlock .proShow .product:nth-child(n+4) {
         display: none; } }
+
+/* ======= main - cart ======= */
+.cartPage .cart-wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 42px;
+  padding-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .cartPage .cart-wrap .yourCart {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    margin-right: 20px; }
+    .cartPage .cart-wrap .yourCart h2 {
+      font-size: 24px;
+      color: #3F5D45;
+      line-height: 65px;
+      font-weight: 500;
+      text-align: center;
+      background-color: #EAF0ED;
+      margin-bottom: 13px; }
+    .cartPage .cart-wrap .yourCart .cartOrderList li {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-bottom: 1px solid #EAF0ED;
+      padding: 20px 0;
+      color: #3F5D45; }
+      .cartPage .cart-wrap .yourCart .cartOrderList li .cartImg img {
+        width: 110px;
+        height: 110px; }
+      .cartPage .cart-wrap .yourCart .cartOrderList li .proText {
+        line-height: 1.8; }
+        .cartPage .cart-wrap .yourCart .cartOrderList li .proText P:nth-of-type(1) {
+          font-size: 20px; }
+        .cartPage .cart-wrap .yourCart .cartOrderList li .proText P:nth-of-type(2) {
+          font-size: 16px; }
+      .cartPage .cart-wrap .yourCart .cartOrderList li .count {
+        border: 1px solid #EAF0ED;
+        text-align: center; }
+        .cartPage .cart-wrap .yourCart .cartOrderList li .count span {
+          display: inline-block;
+          width: 48px;
+          line-height: 48px; }
+        .cartPage .cart-wrap .yourCart .cartOrderList li .count span:nth-of-type(2) {
+          border-left: 1px solid #EAF0ED;
+          border-right: 1px solid #EAF0ED; }
+      .cartPage .cart-wrap .yourCart .cartOrderList li .total {
+        font-weight: 500;
+        font-size: 20px; }
+      .cartPage .cart-wrap .yourCart .cartOrderList li .fa-trash-o {
+        color: #8DA291;
+        font-size: 24px; }
+  .cartPage .cart-wrap .orderSummary {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+    .cartPage .cart-wrap .orderSummary div {
+      background-color: #3F5D45; }
+      .cartPage .cart-wrap .orderSummary div h2 {
+        color: #EAF0ED;
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+        padding: 16px 0; }
+      .cartPage .cart-wrap .orderSummary div hr {
+        margin: 0 20px 10px;
+        color: #EAF0ED; }
+      .cartPage .cart-wrap .orderSummary div p {
+        color: #EAF0ED;
+        margin: 8px 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .cartPage .cart-wrap .orderSummary div p span {
+          font-weight: 300;
+          font-size: 16px; }
+      .cartPage .cart-wrap .orderSummary div p:nth-of-type(3) {
+        margin: 16px 20px; }
+        .cartPage .cart-wrap .orderSummary div p:nth-of-type(3) span {
+          font-weight: 500;
+          font-size: 20px; }
+      .cartPage .cart-wrap .orderSummary div button {
+        width: 100%;
+        height: 65px;
+        color: #3F5D45;
+        background-color: #FFE180;
+        font-family: "Noto Sans TC", sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+        font-size: 24px; }
