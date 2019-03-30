@@ -5,9 +5,16 @@
         padding-top: 25px;
         display: flex;
         justify-content: space-between;
+        @include iphone5Plus(){
+            @include mb-wrapper;
+            display: block;
+        }
         .yourCart{
             flex: 2;
             margin-right: 20px;
+            @include iphone5Plus(){
+                margin-right: 0;
+            }
             h2{
                 font-size: $font-l;
                 color: $textColor-darkgreen;
@@ -16,8 +23,14 @@
                 text-align: center;
                 background-color: $bg-lightgreen;
                 margin-bottom: 13px;
+                @include iphone5Plus(){
+                    margin-bottom: 0;
+                }
             }
-            .cartOrderList{
+            .cartList{
+                @include iphone5Plus(){
+                    padding: 0 30px;
+                }
                 li{
                     display: flex;
                     justify-content: space-between;
@@ -25,41 +38,87 @@
                     border-bottom: 1px solid #EAF0ED;
                     padding: 20px 0;
                     color: $textColor-darkgreen;
-                    .cartImg{
+                    @include iphone5Plus(){
+                        display: block;
+                        padding: 30px 0 0;
+                        border-bottom:none;
+                    }
+                    .proInfo{
+                        display: flex;
+                        align-items: center;
                         img{
-                            width: 110px;
-                            height: 110px;
+                            @include fit-image(110px, 110px);
+                            @include iphone5Plus(){
+                                @include fit-image(157px, 106px);
+                            }
+                        }
+                        .proCount{
+                            margin-left: 40px;
+                            display: flex;
+                            @include iphone5Plus{
+                                margin-left: 16px;
+                                display: block;
+                            }
+                            p{
+                                line-height: 1.4;
+                                margin-right: 40px;
+                                @include iphone5Plus{
+                                    margin-bottom: 8px;
+                                }
+                                span:nth-of-type(1){
+                                    font-size: $font-m;
+                                }
+                                span:nth-of-type(2){
+                                    font-size: $font-s;
+                                }
+                            }
+                            div{
+                                height: 48px;
+                                max-width: 144px;
+                                border-top: 1px solid #EAF0ED;
+                                border-bottom: 1px solid #EAF0ED;
+                                text-align: center;
+                                display: flex;
+                                span{
+                                    display: inline-block;
+                                    border-left: 1px solid #EAF0ED;
+                                    border-right: 1px solid #EAF0ED;
+                                    width: 48px;
+                                    line-height: 48px;
+                                    cursor: pointer;
+                                }
+                                span:hover{
+                                    background-color: $bg-lightgreen;
+                                }
+                                input{
+                                    @include input($bg-white);
+                                    width: 48px;
+                                    height: 45px;
+                                    text-align: center;
+                                    padding: 0;
+                                }
+                            }
                         }
                     }
-                    .proText{
-                        line-height: 1.8;
-                        P:nth-of-type(1){
-                            font-size: $font-m;
-                        }
-                        P:nth-of-type(2){
-                            font-size: $font-s;
-                        }
-                    }
-                    .count{
-                        border: 1px solid #EAF0ED;
-                        text-align: center;
-                        span{
-                            display: inline-block;
-                            width: 48px;
-                            line-height: 48px;
-                        }
-                        span:nth-of-type(2){
-                            border-left: 1px solid #EAF0ED;
-                            border-right: 1px solid #EAF0ED;
-                        }
-                    }
-                    .total{
-                        font-weight: $font-med;
+                    .proTotal{
+                        font-weight: $font-bold;
                         font-size: $font-m;
+                        @include iphone5Plus(){
+                            border-top: 1px solid #EAF0ED;
+                            border-bottom: 1px solid #EAF0ED;
+                            padding: 10px 0;
+                            margin-top: 10px;
+                            text-align: right;
+                        }
                     }
-                    .fa-trash-o{
-                        color: $textColor-green;
-                        font-size: $font-l;
+                    .deleteBtn{
+                        @include iphone5Plus{
+                            display: none;
+                        }
+                        i{
+                            color: $textColor-green;
+                            font-size: $font-l;
+                        }
                     }
                 }
             }
@@ -69,22 +128,37 @@
             flex: 1;
             div{
                 background-color: $bg-darkgreen;
+                @include iphone5Plus(){
+                    background-color: $bg-white;
+                }
                 h2{
                     color: $textColor-lightgreen;
                     font-weight: $font-med;
                     font-size: $font-l;
                     text-align: center;
                     padding: 16px 0;
+                    @include iphone5Plus(){
+                        color: $textColor-darkgreen;
+                        background-color: $bg-lightgreen;
+                        margin: 30px 30px 16px 30px;
+                    }
                 }
                 hr{
                     margin: 0 20px 10px;
                     color: $textColor-lightgreen;
+                    @include iphone5Plus(){
+                        display: none;
+                    }
                 }
                 p{
                     color: $textColor-lightgreen; 
                     margin: 8px 20px;
                     display: flex;
                     justify-content: space-between;
+                    @include iphone5Plus(){
+                        color: $textColor-darkgreen;
+                        margin: 12px 30px;
+                    }
                     span{
                         font-weight: $font-light;
                         font-size: $font-s;
@@ -92,8 +166,11 @@
                 }
                 p:nth-of-type(3){
                     margin: 16px 20px;
+                    @include iphone5Plus(){
+                        margin: 16px 30px;
+                    }
                     span{  
-                        font-weight: $font-med;
+                        font-weight: $font-bold;
                         font-size: $font-m;
                     }
                 }

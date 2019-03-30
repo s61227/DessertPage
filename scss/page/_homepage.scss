@@ -156,6 +156,7 @@ main{
         @include wrapper;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 40px;
         @include iphone5Plus(){
             @include mb-wrapper;
             padding: 0 30px;
