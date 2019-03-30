@@ -8,8 +8,7 @@
     font-weight: bold;
     outline: none;
     border: 0;
-    cursor: pointer;
-    
+    cursor: pointer; 
 }
 
 @mixin input ($bgColor) {
@@ -17,4 +16,8 @@
     outline: none;
     background-color: $bgColor;
     padding-left: 10px;
+}
+
+@mixin checkbox(){
+    
 }

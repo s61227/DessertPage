@@ -1,0 +1,150 @@
+/* ======= main - login ======= */
+.loginPage{
+    .login-wrap{
+        @include wrapper;
+        display: flex;
+        justify-content: center;
+        margin: 60px 0;
+        @include iphone5Plus(){
+            @include mb-wrapper;
+            margin: 0;
+        }
+        .login{
+            width: 390px;
+            height: 380px;
+            background-color: $bg-darkgreen;
+            @include iphone5Plus(){
+                height: auto;
+            }
+            h1{
+                font-size: $font-xl;
+                color: $textColor-white;
+                padding: 40px 0;
+                text-align: center;
+            }
+            .mb_socialMedia{
+                display:none;
+                @include iphone5Plus(){
+                    display:flex;
+                    height: 116px;
+                    background-color: $bg-lightgreen;
+                    margin: 0 0 30px 0;
+                    button{
+                        @include button(100%, 56px, $textColor-lightgreen, $bg-white);
+                        margin: 30px 0;
+                        img{
+                            width: 80px;
+                        }
+                    }
+                    button:nth-of-type(2){
+                        border-left: 1px solid #EAF0ED;
+                        border-right: 1px solid #EAF0ED;
+                    }
+                }
+            }
+            div{
+                margin: 0 30px 16px;
+                background-color: $bg-lightgreen;
+                line-height: 56px;
+                color: $textColor-darkgreen;
+                font-size: $font-m;
+                padding: 0 20px;
+                i{
+                    min-width: 20px;
+                }
+                input{
+                    @include input($bg-lightgreen);
+                    vertical-align: middle;
+                    font-family: $font-style;
+                    padding-left: 20px;
+                    margin-bottom: 3px;
+                }
+                input::-webkit-input-placeholder{
+                    color: $textColor-green;
+                    letter-spacing: 1px;
+                }
+            }
+            p{
+                margin: 13px 30px 22px;
+                label{
+                    display: block;
+                    position: relative;
+                    padding-left: 22px;
+                    margin-bottom: 12px;
+                    cursor: pointer;
+                    font-size: $font-s;
+                    color: $textColor-lightgreen;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 16px;
+                        width: 16px;
+                        background-color: #eee;
+                    }
+                }
+                label input:checked ~ .checkmark {
+                    background-color: $bg-lightgreen;
+                }
+                .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                }
+                label input:checked ~ .checkmark:after {
+                    display: inline-block;
+                }
+                label .checkmark:after {
+                    left: 4px;
+                    width: 4px;
+                    height: 9px;
+                    border: solid $bg-darkgreen;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+            button{
+                @include button(100%, 65px, $textColor-darkgreen, $bg-yellow);
+                font-size: $font-l;
+                margin-top: 17px;
+            }
+        }
+        .socialMedia{
+            width: 390px;
+            margin: 20px 0;
+            padding: 0 30px;
+            background-color: $bg-lightgreen;
+            @include iphone5Plus(){
+                display: none;
+            }
+            h2{
+                padding: 40px 0;
+                font-size: $font-l;
+                color: $textColor-green;
+                font-weight: $font-light;
+                text-align: center;
+            }
+            button{
+                @include button(100%, 56px, $textColor-green, $bg-white);
+                margin-bottom: 16px;
+                img{
+                    text-align: center;
+                    width: 90px;
+                }
+            }
+        }
+    }
+}
