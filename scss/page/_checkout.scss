@@ -1,0 +1,164 @@
+/* ======= main - checkout ======= */
+.checkoutPage{
+    .checkout-wrap{
+        @include wrapper;
+        padding-top: 25px;
+        padding-bottom: 45px;
+        display: flex;
+        justify-content: center;
+        @include iphone5Plus{
+            @include mb-wrapper;
+        }
+        .checkoutInfo{
+            .checkout{
+                width: 460px;
+                height: auto;
+                @include iphone5Plus{
+                    width: 100%;
+                }
+                >div{
+                    padding: 0 40px;
+                    h1{
+                        font-size: $font-xl;
+                        color: $textColor-lightgreen;
+                        padding: 30px 0;
+                    }
+                    label{
+                        display: inline-block;
+                        font-size: $font-m;
+                        color: $textColor-lightgreen;
+                        margin-bottom: 8px;
+                    }
+                    .input-wrap{
+                        margin: 0 0 16px 0;
+                        padding: 0;
+                        width: 100%;
+                    }
+                }
+                select{
+                    @include select($bg-lightgreen, $textColor-green);
+                    height: 56px;
+                    margin-bottom: 8px;
+                }
+                button{
+                    @include button(100%, 65px, $textColor-darkgreen, $bg-yellow);
+                    font-size: $font-l;
+                    margin-top: 30px;
+                }
+            }
+            .checkout.checkout-1{
+                >div:nth-of-type(2){
+                    display: flex;
+                    justify-content: space-between;
+                    div:nth-of-type(1){
+                        margin-right: 8px;
+                    }
+                }
+                >div:nth-of-type(4){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    div{
+                        flex: 1;
+                    }
+                    div:nth-of-type(1){
+                        margin-right: 8px;
+                    }
+                }
+            }
+            .checkout.checkout-2{
+                >div:nth-of-type(2){
+                    i{
+                        margin-right: 22px;
+                    }
+                }
+                >div:nth-of-type(3){
+                    display: flex;
+                    align-items: flex-end;
+                    div:nth-of-type(1){
+                        margin-right: 8px;
+                    }
+                }
+                >div:nth-of-type(4){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    div{
+                        flex: 1;
+                        margin-bottom: 8px;
+                    }
+                    div:nth-of-type(1){
+                        margin-right: 8px;
+                    }
+                }
+                >div:nth-of-type(5){
+                    div{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+        .orderInfo{
+            min-width: 300px;
+            margin-left: 20px;
+            @include iphone5Plus{
+                display: none;
+            }
+            div{
+                border:1px solid #EAF0ED;
+                margin-bottom: 20px;
+                h2{
+                    line-height: 65px;
+                    width: 100%;
+                    color: $textColor-green;
+                    background-color: $bg-lightgreen;
+                    font-size: $font-l;
+                    text-align: center;
+                    margin-bottom: 16px;
+                }
+            }
+            .summary{
+              p{
+                display: flex;
+                justify-content: space-between;
+                padding: 0 20px;
+                color: $textColor-green;
+                font-weight: $font-light;
+                font-size: $font-s;
+                margin-bottom: 8px;
+              }
+              p:nth-of-type(3){
+                font-size: $font-m;
+                color: $textColor-green;
+                font-weight: $font-med;
+                margin: 16px 0;
+              }  
+
+            }
+            .list{
+                ul{
+                    padding: 0 20px;
+                    li{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 16px;
+                        img{
+                            @include fit-image(120px, 80px);
+                        }
+                        p{
+                            color: $textColor-green;
+                            font-size: $font-s;
+                            font-weight: $font-light;
+                            line-height: 25px;
+                            span:nth-of-type(2){
+                                font-size: $font-m;
+                                font-weight: $font-med;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

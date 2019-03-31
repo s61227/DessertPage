@@ -1,7 +1,56 @@
-@mixin button ($sizeW, $sizeH, $extColor, $bgColor) {
+
+@mixin input ($bgColor) {
+    border: none;
+    outline: none;
+    background-color: $bgColor;
+    padding-left: 10px;
+}
+
+@mixin checkbox-label($pl, $textSize, $textcolor){
+    padding-left: $pl;
+    font-size: $textSize;
+    color: $textcolor;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin checkbox-input{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+@mixin checkbox-mark($sizeW, $sizeH, $bgColor){
+    height: $sizeH;
+    width: $sizeW;
+    background-color: $bgColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@mixin checkbox-mark-after($posL, $sizeW, $sizeH, $borderColor){
+    content: "";
+    display: none;
+    position: absolute;
+    left: $posL;
     width: $sizeW;
     height: $sizeH;
-    color: $extColor;
+    border: solid $borderColor;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@mixin button ($sizeW, $sizeH, $textColor, $bgColor) {
+    width: $sizeW;
+    height: $sizeH;
+    color: $textColor;
     background-color: $bgColor;
     font-family: $font-style;
     font-size: $font-s;
@@ -11,13 +60,21 @@
     cursor: pointer; 
 }
 
-@mixin input ($bgColor) {
+@mixin select($bgColor, $textColor) {
     border: none;
     outline: none;
     background-color: $bgColor;
-    padding-left: 10px;
-}
+    padding:0 20px;
+    color:$textColor;
+    font-family: $font-style;
+    width: 100%;
 
-@mixin checkbox(){
-    
 }
+// form
+// checkbox
+// select
+// input
+// step-bar
+// a-Btn
+
+
