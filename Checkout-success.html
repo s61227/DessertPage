@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,18 @@
 
     <!-- font-awesome的CND -->
     <script src="https://use.fontawesome.com/771d69edc4.js"></script>
-
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700|Noto+Serif" rel="stylesheet">
 
     <link rel="stylesheet" href="css/all.css">
 
+    <!-- jQuery Core 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
 </head>
+
 <body>
     <!-- ======= header區 ======= -->
     <header>
@@ -32,51 +38,19 @@
             </nav>
         </div>
     </header>
-    
-    <!-- ======= main區 - Login ======= -->
-    <main class="loginPage">
-        <div class="login-wrap">
-            <form class="login">
-                <h1>會員登入</h1>
-                <div class="mb_socialMedia">
-                    <button>
-                        <img src="images/logo/ic-facebook-logotype.svg">
-                    </button>
-                    <button>
-                        <img src="images/logo/ic-google.svg">
-                    </button>
-                    <button>
-                        <img src="images/logo/ic-yahoo.svg">
-                    </button>
+
+    <!-- ======= main區 - checkout ======= -->
+    <main class="checkoutPage">
+        <div class="checkout-wrap">
+            <section class="checkoutInfo checkout-success">
+                <div class="checkout">
+                    <div class="stepBar"></div>
+                    <img src="images/quote/checkout-success.svg">
+                    <button class="pc-Btn">繼續逛逛</button>
                 </div>
-                <div class="input-wrap">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <input type="text" placeholder="電子信箱/手機號碼">
-                </div>
-                <div class="input-wrap">
-                    <i class="fa fa-key" aria-hidden="true"></i>
-                    <input type="text" placeholder="請輸入使用者密碼">
-                </div>
-                <p class="custom-checkbox">
-                    <label>記住我
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label> 
-                </p>
-                <button>登入帳號</button>
-            </form>
-            <div class="socialMedia">
-                <h2>—— 連結社群帳號 ——</h2>
-                <button>
-                    <img src="images/logo/ic-facebook-logotype.svg">
-                </button>
-                <button>
-                    <img src="images/logo/ic-google.svg">
-                </button>
-                <button>
-                    <img src="images/logo/ic-yahoo.svg">
-                </button>
-            </div>
+                <button class="mb-Btn">繼續逛逛</button>
+            </section>
+            
         </div>
     </main>
 
@@ -97,9 +71,8 @@
                 <aside>
                     <img src="images/logo/logotype.png" alt="">
                     <p>
-                        07-1234-5678<br>
-                        sweetaste@email.com<br>
-                        800 高雄市新興區幸福路 520 號
+                        07-1234-5678<br> sweetaste@email.com
+                        <br> 800 高雄市新興區幸福路 520 號
                     </p>
                     <div class="socialmedia">
                         <img src="images/logo/ic-line@.png" alt="">

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,17 @@
 
     <!-- font-awesome的CND -->
     <script src="https://use.fontawesome.com/771d69edc4.js"></script>
-
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700|Noto+Serif" rel="stylesheet">
 
     <link rel="stylesheet" href="css/all.css">
 
+    <!-- jQuery Core 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+
 </head>
+
 <body>
     <!-- ======= header區 ======= -->
     <header>
@@ -32,55 +37,71 @@
             </nav>
         </div>
     </header>
-    
+
     <!-- ======= main區 - checkout ======= -->
     <main class="checkoutPage">
         <div class="checkout-wrap">
             <section class="checkoutInfo">
-                <form class="checkout checkout-1">
+                <form class="checkout checkout-3">
                     <div class="form-row">
-                        <h1>運送</h1>
+                        <h1>發票</h1>
                         <div class="stepBar"></div>
                     </div>
                     <div class="form-row">
-                        <div>
-                            <label for="">姓氏</label>
+                        <div class="tab active">
+                            <a href="#E-invoice">電子發票</a>
+                        </div>
+                        <div class="tab">
+                            <a href="#Post-invoice">郵寄發票</a>
+                        </div>
+                    </div>
+                    <section class="tab-content" id="E-invoice">
+                        <div class="form-row">
+                            <label for="">電子郵件信箱</label>
                             <div class="input-wrap">
-                                <input type="text" placeholder="王">
+                                <input type="text" placeholder="example@email.com">
                             </div>
                         </div>
-                        <div>
-                            <label for="">名字</label>
+                        <div class="form-row">
+                            <label for="">統一編號（選填）</label>
                             <div class="input-wrap">
-                                <input type="text" placeholder="小明">
+                                <input type="text" placeholder="12345678">
                             </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <label for="">電話</label>
-                        <div class="input-wrap">
-                            <input type="text" placeholder="0912-345-678">
+                    </section>
+                    <section class="tab-content" id="Post-invoice">
+                        <div class="form-row">
+                            <div>
+                                <label for="">地址</label><br>
+                                <select name="" id="city">
+                                    <option value="高雄市">高雄市</option>
+                                </select>
+                            </div>
+                            <div>
+                                <p class="custom-checkbox">
+                                    <label>同運送地址
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </p>
+                                <select name="" id="zone">
+                                    <option value="新興區">新興區</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div>
-                            <label for="">地址</label><br>
-                            <select name="" id="city">
-                                <option value="高雄市">高雄市</option>
-                            </select>
+                        <div class="form-row">
+                            <div class="input-wrap">
+                                <input type="text" placeholder="幸福路 520 號">
+                            </div>
                         </div>
-                        <div>
-                            <select name="" id="zone">
-                                <option value="新興區">新興區</option>
-                            </select>
+                        <div class="form-row">
+                            <label for="">統一編號（選填）</label>
+                            <div class="input-wrap">
+                                <input type="text" placeholder="12345678">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-wrap">
-                            <input type="text" placeholder="幸福路 520 號">
-                        </div>
-                    </div>
-                    <button>下一步</button>
+                    </section>
+                    <button>確認結帳</button>
                 </form>
             </section>
             <section class="orderInfo">
@@ -127,7 +148,6 @@
                 </div>
             </section>
         </div>
-        
     </main>
 
     <!-- ======= footer區 ======= -->
@@ -147,9 +167,8 @@
                 <aside>
                     <img src="images/logo/logotype.png" alt="">
                     <p>
-                        07-1234-5678<br>
-                        sweetaste@email.com<br>
-                        800 高雄市新興區幸福路 520 號
+                        07-1234-5678<br> sweetaste@email.com
+                        <br> 800 高雄市新興區幸福路 520 號
                     </p>
                     <div class="socialmedia">
                         <img src="images/logo/ic-line@.png" alt="">
@@ -164,4 +183,18 @@
         </section>
     </footer>
 </body>
+
+<script>
+    // ====== Tab切換 ======
+    $('.tab-content[id!="E-invoice"]').hide();
+    $('.tab a').on('click', function(e){
+        e.preventDefault();
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+        target = $(this).attr('href');
+        $('.tab-content[id!="target"]').hide();
+        $(target).fadeIn(600);
+    });
+</script>
+
 </html>

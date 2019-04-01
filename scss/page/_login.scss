@@ -37,23 +37,7 @@
                 }
             }
             p{
-                margin: 13px 30px 22px;
-                label{
-                    margin-bottom: 12px;
-                    @include checkbox-label(22px, $font-s, $textColor-lightgreen);
-                    input {
-                        @include checkbox-input;
-                    }
-                    .checkmark {
-                        @include checkbox-mark(16px, 16px, $bg-white);
-                    }
-                    .checkmark:after {
-                        @include checkbox-mark-after(4px, 4px, 9px, $bg-darkgreen);
-                    }
-                }
-                label input:checked ~ .checkmark:after {
-                    display: inline-block;
-                }
+                margin: 13px 30px 22px;  
             }
             button{
                 @include button(100%, 65px, $textColor-darkgreen, $bg-yellow);
@@ -120,4 +104,22 @@ form{
         color: $textColor-green;
         letter-spacing: 1px;
     } 
+}
+.custom-checkbox{
+    label{
+        margin-bottom: 12px;
+        @include checkbox-label(22px, $font-s, $textColor-lightgreen);
+        input {
+            @include checkbox-input;
+        }
+        .checkmark {
+            @include checkbox-mark(16px, 16px, $bg-white);
+        }
+        .checkmark:after {
+            @include checkbox-mark-after(4px, 4px, 9px, $bg-darkgreen);
+        }
+    }
+    label input:checked ~ .checkmark:after {
+        display: inline-block;
+    }
 }
