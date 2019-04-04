@@ -12,23 +12,30 @@
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700|Noto+Serif" rel="stylesheet">
 
+    <!-- icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/logo-light.png">
+
+    <!-- custom CSS -->
     <link rel="stylesheet" href="css/all.css">
 
+    <!-- jQuery Core 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- ======= header區 ======= -->
     <header>
         <div class="topMenu">
-            <div class="mb_topMenu"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div class="MenuBar"><i class="fa fa-bars" aria-hidden="true"></i></div>
             <div class="logo">
-                <img src="images/logo/logo-all-dark.png" class="pc_logo">
-                <img src="images/logo/logotype-sm-dark.png" class="mb_logo">
+                <a href="Homepage.html"><img src="images/logo/logo-all-dark.png" class="pc_logo"></a>
+                <a href="Homepage.html"><img src="images/logo/logotype-sm-dark.png" class="mb_logo"></a>
             </div>
+            <a href="Cart.html" class="mb_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
             <nav>
                 <a href="Homepage.html">首頁</a>
                 <a href="Product.html">甜點</a>
                 <a href="Login.html">登入</a>
-                <a href="Cart.html" id="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                <a href="Cart.html" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
             </nav>
         </div>
     </header>
@@ -37,7 +44,7 @@
     <main class="checkoutPage">
         <div class="checkout-wrap">
             <section class="checkoutInfo">
-                <form class="checkout checkout-2">
+                <form class="checkout checkout-2" action="Checkout-3.html">
                     <div class="form-row">
                         <h1>付款</h1>
                         <div class="stepBar"></div>
@@ -165,4 +172,6 @@
         </section>
     </footer>
 </body>
+<!-- custom JS -->
+<script src="js/all.js"></script>
 </html>

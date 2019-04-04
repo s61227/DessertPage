@@ -82,7 +82,22 @@ header {
         height: 84px;
         -webkit-box-align: center;
         -ms-flex-align: center;
-        align-items: center; } }
+        align-items: center;
+        position: relative; } }
+    @media (max-width: 414px) {
+      header .topMenu nav {
+        max-height: 0px;
+        overflow: hidden;
+        -webkit-transition: max-height 0.5s;
+        -o-transition: max-height 0.5s;
+        transition: max-height 0.5s;
+        position: absolute;
+        top: 86px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        background-color: #ffffff;
+        opacity: 0.9; } }
     header .topMenu nav a {
       font-size: 16px;
       color: #3F5D45;
@@ -91,20 +106,33 @@ header {
       padding: 13.5px 30px; }
       @media (max-width: 414px) {
         header .topMenu nav a {
-          display: none; } }
-    header .topMenu nav a#cart {
+          display: block;
+          border-bottom: 1px solid #EAF0ED; } }
+    header .topMenu nav .cart {
       padding: 13.5px 0 13.5px 40px; }
       @media (max-width: 414px) {
-        header .topMenu nav a#cart {
-          display: block;
-          padding: 0;
-          font-size: 20px; } }
-    header .topMenu .mb_topMenu {
+        header .topMenu nav .cart {
+          display: none; } }
+    header .topMenu nav.menu-show {
+      max-height: 132px;
+      display: block;
+      -webkit-transition: max-height 0.5s;
+      -o-transition: max-height 0.5s;
+      transition: max-height 0.5s; }
+    header .topMenu .mb_cart {
       display: none; }
       @media (max-width: 414px) {
-        header .topMenu .mb_topMenu {
+        header .topMenu .mb_cart {
+          display: block;
+          font-size: 16px;
+          color: #3F5D45;
+          font-weight: 500; } }
+    header .topMenu .MenuBar {
+      display: none; }
+      @media (max-width: 414px) {
+        header .topMenu .MenuBar {
           display: block; }
-          header .topMenu .mb_topMenu i {
+          header .topMenu .MenuBar i {
             color: #3F5D45;
             font-size: 20px; } }
     header .topMenu .pc_logo {

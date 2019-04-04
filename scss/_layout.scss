@@ -19,8 +19,21 @@ header{
             padding: 0 30px;
             height: 84px;
             align-items: center;
+            position: relative;
         }
         nav{
+            @include iphone5Plus(){
+                max-height: 0px;
+                overflow: hidden;
+                transition: max-height 0.5s;
+                position: absolute;
+                top:86px;
+                right: 0;
+                left: 0;
+                text-align: center;
+                background-color: $bg-white;
+                opacity: 0.9;
+            }
             a{
                 font-size: $font-s;
                 color: $textColor-darkgreen;
@@ -28,19 +41,32 @@ header{
                 display: inline-block;
                 padding: 13.5px 30px;
                 @include iphone5Plus(){
+                    display: block;
+                    border-bottom: 1px solid #EAF0ED;
+                }
+            }
+            .cart{
+                padding: 13.5px 0 13.5px 40px;
+                @include iphone5Plus(){
                     display: none;
                 }
             }
-            a#cart{
-                padding: 13.5px 0 13.5px 40px;
-                @include iphone5Plus(){
-                    display: block;
-                    padding: 0;
-                    font-size: $font-m;
-                }
+        }
+        nav.menu-show{
+            max-height: 132px;
+            display: block;
+            transition: max-height 0.5s;
+        }
+        .mb_cart{
+            display: none;
+            @include iphone5Plus(){
+                display: block;
+                font-size: $font-s;
+                color: $textColor-darkgreen;
+                font-weight: $font-med;
             }
         }
-        .mb_topMenu{
+        .MenuBar{
             display: none;
             @include iphone5Plus(){
                 display: block;
